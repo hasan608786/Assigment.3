@@ -1,0 +1,29 @@
+void main() {
+  Person thePerson = Person("Hasan", 18, "Male");
+  thePerson.person();
+  Student theStudent = Student("Faisal", 16, "Male", "Grade 6");
+  theStudent.student();
+
+  }
+
+class Person {
+  String Name;
+  int Age;
+  String Gender;
+  
+  Person(this.Name, this.Age, this.Gender);
+  
+  person(){
+    print("Person: $Name, $Age, $Gender");
+  }
+}
+
+class Student extends Person {
+  String Grade;
+  
+  Student(String Name, int Age, String Gender, this.Grade) : super(Name, Age, Gender);
+
+  student(){
+    print("Student: $Name, $Age, $Gender, $Grade");
+  }
+}
